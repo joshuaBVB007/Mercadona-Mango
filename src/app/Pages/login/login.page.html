@@ -1,0 +1,34 @@
+<ion-header class="unsetAll" *ngIf="headerVisible" translucent="true">
+  <ion-toolbar>
+    <ion-title>{{PageName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+ 
+  <div class="homeScreen" collapse="condense">
+     <!--Image-->
+     <div class="displayFlexCol">
+       <img [src]="img_app"
+       class="imgLogo imageSmallRound">
+       <div class="imgLabel">
+         <h1 class="welcome">Bienvenido/a</h1>
+         <h1 class="description">Que es lo que te gustaria hacer hoy?</h1>
+        </div>
+      </div>
+      
+      <!--Buttons-->
+      <ion-buttons collpase="true" class="buttonDiv"> 
+        <button (click)="OpenEventos()" expand="block" [ngClass]="button_arriba_style">Eventos</button>
+        <button (click)="OpenComprar()" expand="block" [ngClass]="button_abajo_style">Comprar</button>
+      </ion-buttons>
+      
+      <!--Known person-->
+    <div class="knownPerson">
+      <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class=" imageSmallRoundLeft iconopersona">
+      <h1 class="noeresuser">No eres 'Marie Sánchez'? <u>Log In</u> </h1>
+    </div>
+  </div>
+
+</ion-content>
